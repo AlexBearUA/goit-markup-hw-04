@@ -122,9 +122,12 @@ img {
   align-items: center;
 }
 
-.nav .item:not(:last-child),
-.contacts .item:not(:last-child) {
+.nav-list:not(:last-child) {
   margin-right: 50px;
+}
+
+.contacts-list:not(:last-child) {
+  margin-right: 30px;
 }
 
 .contacts {
@@ -147,11 +150,26 @@ img {
 }
 
 .contacts-link {
-  display: block;
-  padding: 32px 0;
+  display: flex;
+  align-items: center;
 
   text-decoration: none;
   color: var(--main-text-color);
+}
+
+.contacts-link-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.envelope {
+  width: 16px;
+  height: 12px;
+}
+
+.smartphone {
+  width: 10px;
+  height: 16px;
 }
 
 .nav-link:hover,
@@ -167,9 +185,15 @@ img {
 
 /* Footer styles */
 
-.footer {
+.footer-background {
   padding: 60px 0;
   background-color: var(--secondary-background-color);
+}
+
+.footer {
+  display: flex;
+  gap: 70px;
+  align-items: baseline;
 }
 
 .footer-address {
@@ -186,6 +210,20 @@ img {
   color: var(--our-contacts-color);
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+
+.join-us-text {
+  font-weight: 700;
+  line-height: 1.71;
+  text-transform: uppercase;
+  color: var(--main-background-color);
+  letter-spacing: 0.03%;
+  margin-bottom: 20px;
+}
+
+.soc-link-footer.soc-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }
 
 .adress .item:not(:last-child) {
@@ -205,13 +243,18 @@ img {
 
 .hero {
   padding: 200px;
-
   text-align: center;
+
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/background-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1600px;
   background-color: var(--secondary-background-color);
 }
 
 .hero-title {
-  width: 696px;
+  max-width: 696px;
   margin: 0 auto 30px;
 
   font-weight: 900;
@@ -243,9 +286,9 @@ img {
 
 /* Sections styles */
 
-/* Our conveniences section styles */
+/* Our advantages section styles */
 
-.conven-title {
+.advantages-title {
   margin-bottom: 10px;
 
   font-weight: 700;
@@ -256,20 +299,38 @@ img {
   font-size: inherit;
 }
 
-.conven-text {
+.advantages-text {
   line-height: 1.71;
 }
 
-.conveniences {
+.advantages {
   display: flex;
 }
 
-.conveniences .item:not(:last-child) {
+.advantages-list:not(:last-child) {
   margin-right: 30px;
 }
 
-.conveniences .item {
+.advantages-list {
+  list-style-type: none;
   width: 25%;
+}
+
+.advantages-thumb {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 100px;
+  background-color: #f5f4fa;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+
+.our-adnvantages-icon {
+  width: 70px;
+  height: 70px;
 }
 
 /* What we do section styles */
@@ -305,6 +366,7 @@ img {
 .ourteam-text {
   font-size: 16px;
   line-height: 1.17;
+  margin-bottom: 16px;
 }
 
 .ourteam {
@@ -313,7 +375,11 @@ img {
 
 .ourteam-list {
   width: 25%;
+
   background-color: var(--main-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .ourteam-cards {
@@ -323,6 +389,74 @@ img {
 
 .ourteam-list:not(:last-child) {
   margin-right: 30px;
+}
+
+.soc-networks {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.soc-list {
+  list-style-type: none;
+}
+
+.soc-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #afb1b8;
+}
+
+.soc-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.soc-link:hover {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
+.soc-icon:hover {
+  fill: currentColor;
+}
+
+/* Constant clients section styles */
+
+.constant-clients {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.clients-list {
+  list-style: none;
+}
+
+.clients-link {
+  width: 170px;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #afb1b8;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-link:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.clients-icon {
+  width: 160px;
+  height: 60px;
+  fill: currentColor;
 }
 
 /* Portfolio */
