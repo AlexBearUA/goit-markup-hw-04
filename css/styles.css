@@ -32,6 +32,10 @@ ul {
   padding: 0;
 }
 
+li {
+  list-style: none;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -59,10 +63,6 @@ img {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
-}
-
-.list {
-  list-style-type: none;
 }
 
 .section-title {
@@ -152,6 +152,7 @@ img {
 .contacts-link {
   display: flex;
   align-items: center;
+  padding: 32px 0;
 
   text-decoration: none;
   color: var(--main-text-color);
@@ -226,7 +227,7 @@ img {
   color: #ffffff;
 }
 
-.adress .item:not(:last-child) {
+.adres-item:not(:last-child) {
   margin-bottom: 9px;
 }
 
@@ -343,7 +344,7 @@ img {
   display: flex;
 }
 
-.what-we-do-list .item:not(:last-child) {
+.what-we-do-item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -416,7 +417,8 @@ img {
   fill: currentColor;
 }
 
-.soc-link:hover {
+.soc-link:hover,
+.soc-link:focus {
   background-color: #2196f3;
   color: #ffffff;
 }
@@ -448,7 +450,8 @@ img {
   border-radius: 4px;
 }
 
-.clients-link:hover {
+.clients-link:hover,
+.clients-link:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
